@@ -1,0 +1,626 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0;
+}
+
+html,body,#container {
+	height: 100%;
+}
+
+body>#container {
+	height: auto;
+	min-height: 100%;
+	margin-bottom: -40px;
+}
+.userHeading{
+background: transparent;
+margin-top: 40px;
+margin-left: 0px;
+margin-right: -10px;
+}
+/* #container:AFTER {
+	content: "";
+	display: block;
+} */
+
+#container:AFTER {
+	content: "";
+	display: block;
+	text-align: center;
+	height: 40px;
+}
+
+.site-footer {
+	text-align: center;
+	height: 40px;
+	background-color: #e6e6e6;
+}
+
+.page-width {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	height: inherit;
+	background-color: white;
+}
+
+.page-content {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	background-color: #F6F6F4;
+}
+
+#menuwrapper {
+	height: 49px;
+	border-bottom: 2px solid #0FA1E0;
+	border-radius: 5px 5px 0 0;
+	background: linear-gradient(to bottom, #32323A 0%, #141414 100%);
+	background: url("../images/topbar.png") 100% 100%;
+}
+
+/* We remove the margin, padding, and list style of UL and LI components */
+#menuwrapper ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 49px;
+	text-align: justify;
+	float: left;
+}
+
+#menuwrapper td {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 49px;
+	text-align: justify;
+	float: left;
+}
+
+/* We apply background color and border bottom white and width to 150px */
+#menuwrapper ul li {
+	width: auto;
+	cursor: pointer;
+	margin: 0px;
+	float: left;
+	height: 49px;
+}
+
+#menuwrapper td a {
+	width: auto;
+	cursor: pointer;
+	margin: 0px;
+	float: left;
+	height: 49px;
+}
+
+
+/* We apply the background hover color when user hover the mouse over of the li component */
+#menuwrapper ul li:hover {
+	background-color: black;
+	position: relative;
+}
+
+
+#menuwrapper td a:li:hover {
+	background-color: black;
+	position: relative;
+}
+
+#first-menu-item {
+	border-top-left-radius: 5px;
+}
+
+/* We apply the link style */
+#menuwrapper ul li a {
+	font-size: 11px;
+	color: #ffffff;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: auto;
+	display: block;
+	height: 49px;
+	text-decoration: none;
+	background: transparent;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	margin-top: 0px;
+	line-height: 45px;
+	text-align: center;
+}
+
+#menuwrapper td a {
+	font-size: 11px;
+	color: #ffffff;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: auto;
+	display: block;
+	height: 49px;
+	text-decoration: none;
+	background: transparent;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	margin-top: 0px;
+	line-height: 45px;
+	text-align: center;
+}
+
+#menuwrapper td a:hover
+{
+	background-color: rgb(182, 182, 182);
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	margin-top: -10px;
+	margin-left: 33px;
+	margin-bottom: 2px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #0FA1E0;
+}
+
+.arrow-uporder {
+	width: 0;
+	height: 0;
+	margin-top: -10px;
+	margin-left: 17px;
+	margin-bottom: 2px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #0FA1E0;
+}
+
+.arrow-upfinancial {
+	width: 0;
+	height: 0;
+	margin-top: -10px;
+	margin-left: 55px;
+	margin-bottom: 2px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #0FA1E0;
+}
+
+.arrow-upmaintain {
+	width: 0;
+	height: 0;
+	margin-top: -10px;
+	margin-left: 35px;
+	margin-bottom: 2px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #0FA1E0;
+}
+
+/**** SECOND LEVEL MENU ****/
+/* We make the position to absolute for flyout menu and hidden the ul until the user hover the parent li item */
+#menuwrapper ul li ul {
+	z-index: 1;
+	position: absolute;
+	display: none;
+	float: left;
+}
+
+/* When user has hovered the li item, we show the ul list by applying display:block, note: 150px is the individual menu width.  */
+#menuwrapper ul li:hover ul {
+	top: 49px;
+	display: block;	
+	background-color: #0FA1E0;
+}
+
+/* we apply different background color to 2nd level menu items*/
+#menuwrapper ul li ul li {
+	height: 45px;
+	background-color: #0FA1E0;
+}
+
+/* We change the background color for the level 2 submenu when hovering the menu */
+#menuwrapper ul li:hover ul li:hover {
+	background-color: #0C7FB0;
+}
+
+/* We style the color of level 2 links */
+#menuwrapper ul li ul li a {
+	color: #ffffff;
+	display: list-item;
+	width: 135px;
+}
+
+/**** THIRD LEVEL MENU ****/
+/* We need to hide the 3rd menu, when hovering the first level menu */
+#menuwrapper ul li:hover ul li ul {
+	position: absolute;
+	display: none;
+}
+
+/* We show the third level menu only when they hover the second level menu parent */
+#menuwrapper ul li:hover ul li:hover ul {
+	display: block;
+	left: 150px;
+	top: 0;
+}
+
+/* We change the background color for the level 3 submenu*/
+#menuwrapper ul li:hover ul li:hover ul li {
+	background: #86d3fa;
+}
+
+/* We change the background color for the level 3 submenu when hovering the menu */
+#menuwrapper ul li:hover ul li:hover ul li:hover {
+	background: #358ebc;
+}
+
+/* We change the level 3 link color */
+#menuwrapper ul li:hover ul li:hover ul li a {
+	color: #ffffff;
+}
+
+.header-background {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	background-color: #e6e6e6;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+	height: 65px;
+	display: table;
+	border-radius: 3px;
+	background-color: #e6e6e6;
+	width: 980px;
+}
+
+.header-background>h2 {
+	height: inherit;
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	/* font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif; */
+	font-weight: 300pt;
+	color: #000000;
+	font-size: 25pt;
+	line-height: 24pt;
+	letter-spacing: 0.03em;
+}
+
+.button-main {
+	font-size: 14px;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	cursor: pointer;
+	border-radius: 4px;
+	background: linear-gradient(to bottom, #08c, #04c);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	margin-right: 10px;
+	border-color: #08c;
+}
+
+.button-main:hover {
+	color: white;
+	background: #04c;
+}
+
+.button-main:ACTIVE {
+	outline: none;
+}
+
+.button-main:FOCUS {
+	outline: none;
+}
+
+.button-cancel {
+	font-size: 14px;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	color: #222;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px
+		rgba(0, 0, 0, .05);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	background: linear-gradient(to bottom, #ee5f5b, #bd362f);
+	background-repeat: repeat-x;
+	border-color: #ee5f5b;
+}
+
+.button-cancel:hover {
+	color: #fff;
+	background: #bd362f;
+}
+
+.button-cancel:ACTIVE {
+	outline: none;
+}
+
+.button-cancel:FOCUS {
+	outline: none;
+}
+
+.button-margin {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.textfield-label {
+	width: 140px;
+	display: inline-block;
+	height: 20px;
+	min-width: 16px;
+	padding: 4px 5px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	color: #000;
+	margin-bottom: 5px;
+	margin-left: 8px;
+}
+
+.textfield-label-small {
+	width: 120px;
+	display: inline-block;
+	height: 15px;
+	min-width: 16px;
+	padding: 4px 5px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	color: #000;
+	margin-bottom: 5px;
+}
+
+.textfield-style {
+	height: 24px;
+	width: 260px;
+	margin-top: -4px;
+	margin-left: -3px;
+}
+
+.textfield-style-small {
+	height: 18.5px;
+	width: 154px;
+	margin-top: -5px;
+	margin-left: -3px;
+}
+
+.frame {
+	border: solid 2px;
+	border-color: #f1f1f1;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+.frame-header {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f5f5f5;
+	height: 65px;
+	display: table;
+	border-radius: 3px;
+	width: inherit;
+}
+
+.frame-header>h2 {
+	height: inherit;
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+	font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial,
+		Helvetica, sans-serif;
+	font-weight: 500px;
+	color: #000000;
+	font-size: 25pt;
+	line-height: 24pt;
+	letter-spacing: 0.03em;
+}
+
+.frame-body {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.button-center {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: 980px;
+}
+
+.zaHeader {
+	background-color: white;
+}
+
+.input-control.text {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 7pt;
+	display: inline-block;
+	background-color: #fff;
+	outline: 0;
+	position: relative;
+	background-color: #fff;
+	outline: 0;
+	height: 24px;
+}
+
+.input-control.text .btn-search {
+	background-color: #F0F0F0;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 2;
+	border: 0;
+	right: 4px;
+	width: 24px;
+	height: 24px;
+	min-height: 1px;
+	min-width: 1px;
+	padding: 0;
+	margin: 0;
+	display: none;
+	cursor: pointer;
+}
+
+.input-control.text .btn-search:after {
+	font-family: iconFont;
+	font-size: 10pt;
+}
+
+.input-control.text .btn-search:not(:disabled):active {
+	background-color: #1d1d1d;
+	color: #ffffff;
+}
+
+.input-control.text .btn-search:active {
+	left: auto;
+}
+
+.input-control.text .btn-search:focus {
+	outline: none;
+}
+
+.input-control.text .btn-search:after {
+	content: "\e041";
+}
+
+.input-control.text .btn-search {
+	display: block;
+}
+
+.input-control.text [class*="btn-"] {
+	background-color: transparent;
+}
+
+.input-control.text input {
+	border: 2px #d9d9d9 solid;
+	width: auto;
+	padding: 5px;
+	z-index: 1;
+}
+
+.input-control.text input:focus {
+	outline: 0;
+	border-color: #919191;
+}
+
+.input-control.text input:disabled {
+	padding-right: 5px;
+}
+
+.input-control.text input::-moz-placeholder {
+	color: #999999;
+}
+
+.input-control.text input::-webkit-input-placeholder {
+	color: #999999;
+}
+
+@font-face {
+	font-family: 'iconFont';
+	src: url('../fonts/iconFont.eot');
+	src: url('../fonts/iconFont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/iconFont.woff') format('woff'),
+		url('../fonts/iconFont.ttf') format('truetype'),
+		url('../fonts/iconFont.svg#iconFont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.content-header {
+	border: 1px solid #aaa;
+	color: #222;
+	font-weight: bold;
+	background-color: #ccc;
+}
+
+.content-style {
+	border: 1px solid #aaa;
+	color: #222;
+}
+
+.dropdown-style {
+	background-color: white;
+	height: 30px;
+	width: 205px;
+	border: 1px solid #ccc;
+	font-size: 17px;
+	padding: 3px;
+	color: black;
+	margin-left: -4px;
+	margin-top: -5px;
+}
+
+.dropdown-style:HOVER {
+	font-size: 17px;
+	background: #a99f9a;
+	border: 1px solid #ccc;
+	padding: 3px;
+	color: black;
+	border-color: #a99f9a;
+	padding: 3px;
+	color: black;
+	margin-left: -4px;
+	margin-top: -5px;
+}
+
+.dropdown-style:DISABLED {
+	background-color: rgb(235, 235, 228);
+}
+
+ .white_content {
+	text-align:center;
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        width: 360px;;
+        height: 180px;;
+        padding: 16px;
+        border: 16px solid #336699;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+    }
+    
+    
+#asterisk {
+	color: red;
+	display: inline;
+}
+.brdownth{
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+color: #000;
+}
+
+input[readonly]
+{
+    background-color: #eee;
+	border: 1px solid #ccc;
+}
+

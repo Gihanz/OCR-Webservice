@@ -1,0 +1,102 @@
+@CHARSET "ISO-8859-1";
+
+#canelYesButton {
+	height: 35px;
+	font-size: 16px;
+	margin-left: 80px;
+	margin-top: 10px;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;
+	font-weight: normal;
+	width: 90px;
+	border-radius: 4px;
+	color: rgb(111, 108, 108);
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Sans-serif;
+	border-color: #c5c5c5;
+	background: linear-gradient(to bottom, #f6f6f6, #eaeaea 100%);
+}
+
+#canelYesButton:hover {
+	box-shadox: inset;
+	border-width: 1px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Sans-serif;
+	background: linear-gradient(to bottom, #cbc5c2, #a99f9a 100%);
+}
+
+#canelNoButton {
+	height: 35px;
+	font-size: 16px;
+	margin-top: 8px;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;
+	font-weight: normal;
+	width: 90px;
+	border-radius: 4px;
+	color: rgb(111, 108, 108);
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Sans-serif;
+	border-color: #c5c5c5;
+	background: linear-gradient(to bottom, #f6f6f6, #eaeaea 100%);
+}
+
+#canelNoButton:hover {
+	box-shadox: inset;
+	border-width: 1px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Sans-serif;
+	background: linear-gradient(to bottom, #cbc5c2, #a99f9a 100%);
+}
+
+#ConfirmBoxCancel {
+	float: right;
+	display: inline;
+	width: 362px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, Sans-serif;
+	font-size: 16px;
+	margin-top: 10px;
+	color: rgb(111, 108, 108);
+}
+
+#redColor {
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#greenColor {
+ color: green;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+#blueColor {
+ color: #08c;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+
+
+.redColor {
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.greenColor {
+ color: green;
+ font-weight: bold;
+ font-size: 12px;
+}
+
+.blueColor {
+ color: #08c;
+ font-weight: bold;
+ font-size: 12px;
+}
+
+.blackColor {
+ color: #000;
+ font-weight: bold;
+ font-size: 12px;
+}

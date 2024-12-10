@@ -1,0 +1,339 @@
+#apDiv1 {
+	position: absolute;
+	width: 144px;
+	height: 92px;
+	z-index: 1;
+}
+
+#apDiv2 {
+	position: absolute;
+	width: 87%;
+	height: 92px;
+	z-index: 2;
+	left: 154px;
+	background-image: url(images/SBVhome.jpg);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(0, 102, 102, 1);
+}
+
+#apDiv4 {
+	position: absolute;
+	top: 102px;
+	width: 100%;
+	height: 48px;
+	z-index: 10;
+	background-color: rgba(0, 0, 51, 1);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255, 255, 255, 1);
+	font-weight: bold;
+	font-size: larger;
+	padding-left: 8px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 80%;
+	height: 500px;
+	left: 150px;
+	top: 90px;
+	visibility: visible;
+	border: thin none rgba(153, 153, 153, 1);
+}
+#apDiv51 {
+	position: absolute;
+	width: 80%;
+	height: 500px;
+	left: 290px;
+	top: 150px;
+	visibility: visible;
+	border: thin none rgba(153, 153, 153, 1);
+}
+
+
+#apDiv6 {
+	position: absolute;
+	width: 97.6%;
+	height: 36px;
+	z-index: 1;
+	left: 1%;
+	top: 9px;
+	background-color: #CCCCCC;
+	background-image: url(images/ui-bg_highlight-soft_75_1x100.png);
+	border: 1px solid rgba(130, 130, 130, 1);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: rgba(26, 26, 26, 1);
+	font-size: larger;
+	padding-top: 6px;
+	padding-left: 4px;
+}
+
+#apDiv7 {
+	position: absolute;
+	width: 98%;
+	height: 380px;
+	z-index: 2;
+	left: 1%;
+	top: 53px;
+	border: 1px solid rgba(130, 130, 130, 1);
+}
+
+#save {
+	font-size: 14px;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	cursor: pointer;
+	border-radius: 4px;
+	background: linear-gradient(to bottom, #08c, #04c);
+	margin-top: 5px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	margin-right: 10px;
+	border-color: #08c;
+}
+
+#save:hover {
+	color: white;
+	background: #04c;
+}
+
+#cancel:hover {
+	color: #fff;
+	background: #bd362f;
+}
+
+#cancel {
+	font-size: 14px;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	color: #222;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px
+		rgba(0, 0, 0, .05);
+	margin-top: 5px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	background: linear-gradient(to bottom, #ee5f5b, #bd362f);
+	background-repeat: repeat-x;
+	border-color: #ee5f5b;
+}
+
+.leftdiv {
+	width: 50%;
+	margin-top: 5px;
+	margin-left: 200px;
+	margin-bottom: 20px;
+}
+
+.rightdiv {
+	margin-top: 3px;
+	margin-left: -20px;
+	width: 50%;
+	float: right;
+	
+}
+
+.property {
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+	text-align: left;
+	display: inline-table;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	height: 25px;
+	width: 195px;
+	margin-bottom: 3px;
+	font-size: 14px;
+	margin-top: 5px;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	color: #000;
+	padding-top: 1%; /* or 3px */
+}
+
+.inputField {
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: white;
+	margin-left: -1px;
+	font-size: 14px;
+	height: 21px;
+	width: 213px;
+	margin-top: 4px;
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+.inputField1 {
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: white;
+	margin-left: -1px;
+	font-size: 14px;
+	height: 18px;
+	width: 193px;
+	margin-top: 4px;
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+
+.title {
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: white;
+	margin-left: -1px;
+	height: 29px;
+	width: 180px;
+	margin-top: 1%;
+	border: 1px solid #ccc;
+	font-size: 17px;
+	padding: 3px;
+	color: black;
+}
+
+.title3 {
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: white;
+	margin-left: -1px;
+	height: 29px;
+	width: 390px;
+	margin-top: 1%;
+	border: 1px solid #ccc;
+	font-size: 17px;
+	padding: 3px;
+	color: black;
+}
+
+.thfont {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 12px;
+}
+
+.title1 {
+	border-bottom-right-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: white;
+	margin-left: -1px;
+	height: 20px;
+	width: 100px;
+	margin-top: 1%;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	padding: 3px;
+	color: black;
+}
+
+.btn {
+	float: right;
+	padding: 0px 30px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px
+		rgba(0, 0, 0, .05);
+}
+
+.pageSubHeader {
+	border: 1px solid #aaa;
+	background: #ccc url(../images/ui-bg_highlight-soft_75_1x100.png) 50%
+		50% repeat-x;
+	color: #222;
+	font-weight: bold;
+	margin-top: 100px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Sans-serif;
+	height: 30px; /* or 55px */
+	width: 100%;
+	padding-top: 5px;
+}
+
+
+/*Search styles */
+.suggestionsBox {
+	position: absolute;
+	top: 45px;
+	left: 280px;
+	margin: 0px 0px 0px 0px;
+	width: 248px;
+	z-index: 7;
+	background-color: white;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border: 1px solid #000;
+	color: #0023A7;
+	font-size: 12px;
+	text-align: left;
+}
+
+.suggestionsBoxHide {
+	position: absolute;
+	top: 229px;
+	left: 379px;
+	margin: 0px 0px 0px 0px;
+	width: 248px;
+	z-index: 9;
+	background-color: white;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border: 1px solid #000;
+	color: #0023A7;
+	font-size: 12px;
+	text-align: left;
+}
+
+.suggestionList {
+	margin: 0px;
+	padding: 0px;
+}
+
+.suggestionList li {
+	list-style: none;
+	margin: 0px 0px 3px 0px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.suggestionList li:hover {
+	background-color: RGB(227, 227, 227);
+	color: #0023A7;
+}
+
+
+/*--------------------------------------------------------
+			Login box Styles Starts here
+----------------------------------------------------------*/
+.login-box{	
+	width:400px;
+	height: 200px;
+	border: 1px solid #002577;
+	}
+.login-box .title{
+	padding:5px 10px;
+	height: 20px;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	background: #0000cc; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000FF', endColorstr='#000080',GradientType=1 ); /* for IE */
+	background: -webkit-gradient(linear, left top, right top, from(#0000FF), to(#000080)); /* for webkit browsers */
+	background: -moz-linear-gradient(left,  #0000FF,  #000080); /* for firefox 3.6+ */
+	}
+.login-box .label{
+	}
+.login-box input{
+	width: 200px;
+	height:15px;	
+	padding: 5px;
+	}
+	
+.h-separator-login{
+	background: url("../../images/horizontal-separator.png") no-repeat center;
+}
+/*--------------------------------------------------------
+			Login box Styles Ends here
+----------------------------------------------------------*/
+

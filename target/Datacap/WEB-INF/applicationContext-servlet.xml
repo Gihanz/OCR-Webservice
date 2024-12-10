@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		">
+	<!-- Scans the classpath for annotated components that will be auto-registered as Spring beans -->
+	<context:component-scan base-package="com.datacap.*" />
+	<!-- Activates various annotations to be detected in bean classes e.g: @Autowired -->
+	<context:annotation-config />
+	
+	<!-- <import resource="classpath*:app-config.xml"/>
+ 	<import resource="classpath*:schedulerContext.xml"/> -->
+	<!-- <import resource="classpath*:packageContext.xml" /> -->
+	
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		id="jspViewResolver">
+		<property value="org.springframework.web.servlet.view.JstlView"
+			name="viewClass" />
+		<property value="/pages/" name="prefix" />
+		<property value=".jsp" name="suffix" />
+	</bean>
+	
+	<!-- Spring resoureces for css -->
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	
+	<bean id="datacapconfigDS" class="org.springframework.jndi.JndiObjectFactoryBean" scope="singleton">
+	    <property name="jndiName" value="java:comp/env/jdbc/DatacapConfig" />
+	    <property name="resourceRef" value="true" />  
+	    <property name="lookupOnStartup" value="false"/>
+    	<property name="cache" value="true"/>
+    	<property name="proxyInterface" value="javax.sql.DataSource"/>      
+	</bean>
+	
+	<bean id="entityManagerFactory" 
+			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+			p:packagesToScan="com.datacap.model"
+            p:dataSource-ref="datacapconfigDS"
+            p:persistenceXmlLocation="classpath*:META-INF/persistence.xml"
+        	p:persistenceUnitName="datacapconfigPersistence">        
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="generateDdl" value="false" />
+				<property name="showSql" value="false" />
+				<property name="databasePlatform" value="org.hibernate.dialect.DB2Dialect" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- setting maximum upload size -->
+		<property name="maxUploadSize" value="10000000" />
+	</bean>
+	
+	<!-- Transactions -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+
+	<!-- enable the configuration of transactional behavior based on annotations -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>
